@@ -20,31 +20,31 @@ public class DummyEntity implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long dummyId;
 
-    public Long getId() {
-        return id;
+    public Long getDummyId() {
+        return dummyId;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setDummyId(Long dummyId) {
+        this.dummyId = dummyId;
     }
 
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (dummyId != null ? dummyId.hashCode() : 0);
         return hash;
     }
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
+        // TODO: Warning - this method won't work in the case the dummyId fields are not set
         if (!(object instanceof DummyEntity)) {
             return false;
         }
         DummyEntity other = (DummyEntity) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.dummyId == null && other.dummyId != null) || (this.dummyId != null && !this.dummyId.equals(other.dummyId))) {
             return false;
         }
         return true;
@@ -52,7 +52,7 @@ public class DummyEntity implements Serializable {
 
     @Override
     public String toString() {
-        return "entity.DummyEntity[ id=" + id + " ]";
+        return "entity.DummyEntity[ id=" + dummyId + " ]";
     }
     
 }

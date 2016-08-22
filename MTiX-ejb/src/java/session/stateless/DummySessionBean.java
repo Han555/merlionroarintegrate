@@ -6,6 +6,8 @@
 package session.stateless;
 
 import javax.ejb.Stateless;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
@@ -13,7 +15,14 @@ import javax.ejb.Stateless;
  */
 @Stateless
 public class DummySessionBean implements DummySessionBeanLocal {
+    @PersistenceContext
+    private EntityManager em;
+
+    public void persist(Object object) {
+        em.persist(object);
+    }
 
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
+    
 }
